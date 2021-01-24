@@ -1,0 +1,89 @@
+.container {
+  width: 350px;
+  height: auto;
+  box-shadow: 0px 15px 10px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.topSection {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #edad61;
+  height: 90px;
+  p {
+    color: white;
+    font-size: 26px;
+  }
+  button {
+    border: none;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .buttonBack {
+    background-image: url("../images/back-arrow.png");
+    background-position: left;
+  }
+  .buttonSwitch {
+    background-image: url("../images/switch.png");
+    background-position: right;
+  }
+}
+
+.middleSection {
+  padding: 0 20px;
+  padding-top: 20px;
+  background-color: #2f2f3a;
+  height: 390px;
+  overflow-y: scroll;
+  scrollbar-color: #6a7488 transparent;
+  scrollbar-width: thin;
+  .loadingText {
+    color: #a2abbd;
+  }
+}
+
+.middleSection::-webkit-scrollbar {
+  width: 4px;
+}
+
+.middleSection::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.middleSection::-webkit-scrollbar-thumb {
+  background-color: #6a7488;
+  border-radius: 2px;
+}
+
+.bottomSection {
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #22222b;
+  border-top: 1px solid #6a7488;
+  .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .yellowText {
+      color: #edae61;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .stationPlaying {
+      font-size: 26px;
+      color: #a2abbd;
+    }
+  }
+}
