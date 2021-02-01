@@ -2,26 +2,36 @@
   {
     "name": "Mash FM",
     "frequency": "66,6",
-    "image": "./images/station-image-01.jpg"
+    "image": "station-image-01.jpg"
   },
   {
     "name": "Dribble FM",
     "frequency": "101,2",
-    "image": "./images/station-image-02.jpg"
+    "image": "station-image-02.jpg"
   },
   {
     "name": "Fast FM",
     "frequency": "99,4",
-    "image": "./images/station-image-03.jpg"
+    "image": "station-image-03.jpg"
   },
   {
     "name": "Ballads FM",
     "frequency": "87,1",
-    "image": "./images/station-image-04.jpg"
+    "image": "station-image-04.jpg"
   },
   {
     "name": "Maximum FM",
     "frequency": "142,2",
-    "image": "./images/station-image-05.jpg"
+    "image": "station-image-05.jpg"
+  },
+  {
+    "name": "Dash FM",
+    "frequency": "105,8",
+    "image": "station-image-06.jpg"
+  },
+  {
+    "name": "Grill FM",
+    "frequency": "88,8",
+    "image": "station-image-07.jpg"
   }
 ]

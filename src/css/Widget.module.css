@@ -5,6 +5,7 @@
           box-shadow: 0px 15px 10px 0px rgba(0, 0, 0, 0.2);
   border-radius: 25px;
   overflow: hidden;
+  margin-top: 60px;
 }
 
 .topSection {
@@ -47,23 +48,29 @@
   background-position: left;
 }
 
-.topSection .buttonSwitch {
+.topSection .buttonClose {
   background-image: url("../images/switch.png");
   background-position: right;
 }
 
 .middleSection {
   padding: 0 20px;
-  padding-top: 20px;
   background-color: #2f2f3a;
   height: 390px;
   overflow-y: scroll;
   scrollbar-color: #6a7488 transparent;
   scrollbar-width: thin;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
 }
 
 .middleSection .loadingText {
   color: #a2abbd;
+}
+
+.widgetClosed {
+  height: 0;
+  opacity: 0;
 }
 
 .middleSection::-webkit-scrollbar {
@@ -119,5 +126,11 @@
 .bottomSection .text .stationPlaying {
   font-size: 26px;
   color: #a2abbd;
+}
+
+@media only screen and (max-width: 450px) {
+  .container {
+    width: calc(100% - 40px);
+  }
 }
 /*# sourceMappingURL=Widget.module.css.map */

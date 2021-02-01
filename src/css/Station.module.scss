@@ -6,6 +6,10 @@
   border-bottom: 1px solid #424a5c;
 }
 
+.container:nth-child(1) {
+  margin-top: 20px;
+}
+
 .container:last-of-type {
   border-bottom: none;
 }

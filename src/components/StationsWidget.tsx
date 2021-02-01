@@ -15,10 +15,11 @@ export interface activeStationInterface {
 
 const StationsWidget: React.FC = () => {
   const [stations, setStations] = useState<stationInterface[]>();
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string>("");
 
   const [activeStation, setActiveStation] = useState<activeStationInterface>({ stationOpenIndex: null });
+  const [widgetOpen, setWidgetOpen] = useState<boolean>(true);
 
   useEffect(() => {
     const stationsUrl = "./data/stations.json";
@@ -38,14 +39,24 @@ const StationsWidget: React.FC = () => {
     setActiveStation(stationData);
   };
 
+  const buttonBackClicked = () => {
+    setActiveStation({ stationOpenIndex: null });
+  };
+
+  const buttonCloseClicked = () => {
+    setWidgetOpen(!widgetOpen);
+  };
+
+  const widgetCloseClass = widgetOpen ? "" : styles.widgetClosed;
+
   return (
     <div className={styles.container}>
       <div className={styles.topSection}>
-        <button className={styles.buttonBack}></button>
+        <button className={styles.buttonBack} onClick={() => buttonBackClicked()}></button>
         <p>STATIONS</p>
-        <button className={styles.buttonSwitch}></button>
+        <button className={styles.buttonClose} onClick={() => buttonCloseClicked()}></button>
       </div>
-      <div className={styles.middleSection}>
+      <div className={`${styles.middleSection} ${widgetCloseClass}`}>
         {loading && <h1 className={styles.loadingText}>Loading...</h1>}
         {error && <h1 className={styles.loadingText}>{error}</h1>}
         {stations &&

@@ -26,7 +26,7 @@ const Station: React.FC<Props> = ({ station, stationIndex, onStationChange, acti
     <div className={styles.container}>
       <div className={`${styles.stationDisplay} ${stationDisplayClass}`}>
         <button className={styles.buttonMinus}></button>
-        <div className={styles.stationImage} style={{ backgroundImage: `url("${station.image}")` }}></div>
+        <div className={styles.stationImage} style={{ backgroundImage: `url("./images/${station.image}")` }}></div>
         <button className={styles.buttonPlus}></button>
       </div>
       <div
