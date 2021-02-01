@@ -1,4 +1,4 @@
-#Radio station widget
+# Radio station widget code
 
 Small radio station widget I have made, while practicing typescript. Technologies used: React, Typescript, CSS modules, Sass, Axios.
 
